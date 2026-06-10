@@ -1,6 +1,6 @@
 const PORTFOLIO = {
   name: "Salaheddine Daif",
-  email: "daif4salah@gmail.com",
+  email: "contact.salahdaif@gmail.com",
   location: "Aachen, Germany",
 
   status: "Open to opportunities",
@@ -126,6 +126,6 @@ const PORTFOLIO = {
   social: [
     { label: "GitHub",   url: "https://github.com/daif-salaheddine" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/salaheddine-daif-82366631a/" },
-    { label: "Email",    url: "mailto:daif4salah@gmail.com" },
+    { label: "Email",    url: "mailto:contact.salahdaif@gmail.com" },
   ],
 };
