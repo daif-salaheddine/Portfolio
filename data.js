@@ -54,7 +54,7 @@ const PORTFOLIO = {
           tags: ["React", "TypeScript", "Python"],
           links: {
             live: null,
-            github: "https://github.com/daif-salaheddine",
+            github: null,
           },
         },
       ],
