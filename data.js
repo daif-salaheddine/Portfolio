@@ -39,6 +39,14 @@ const PORTFOLIO = {
       name: "Web & Full-Stack",
       projects: [
         {
+          title: "Family Accountability App",
+          subtitle: "Personal Project, Full-Stack Web Development",
+          description:
+            "A full-stack web app for six family members to set weekly goals, nominate each other for missed targets, and contribute to a shared penalty pot. Built with Next.js, Prisma, and PostgreSQL, featuring real-time updates, NextAuth authentication, and full multilingual support with RTL for Arabic. Deployed and actively used by the family on Vercel.",
+          tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Supabase", "Tailwind CSS"],
+          links: { live: null, github: null },
+        },
+        {
           title: "WifiMap",
           subtitle: "Collaboration with topsystem GmbH",
           description:
@@ -72,7 +80,7 @@ const PORTFOLIO = {
       projects: [
         {
           title: "Calorie Burn Prediction Model",
-          subtitle: "FH Aachen — Applied Data Analytics",
+          subtitle: "FH Aachen, Applied Data Analytics",
           description:
             "End-to-end ML project predicting calorie expenditure from training and lifestyle data. Covered the full analytics workflow: exploratory analysis, feature engineering, model training with Scikit-Learn, and performance evaluation.",
           tags: ["Python", "Apache Spark", "Scikit-Learn", "Jupyter", "ML"],
@@ -80,7 +88,7 @@ const PORTFOLIO = {
         },
         {
           title: "ETL Pipeline & Data Warehouse",
-          subtitle: "FH Aachen — Business Intelligence",
+          subtitle: "FH Aachen, Business Intelligence",
           description:
             "Designed and implemented an ETL pipeline using KNIME to clean and transform raw business data, then loaded it into a Star Schema PostgreSQL data warehouse. Delivered BI dashboards for actionable decision support.",
           tags: ["KNIME", "PostgreSQL", "ETL", "Star Schema", "BI"],
@@ -88,7 +96,7 @@ const PORTFOLIO = {
         },
         {
           title: "Big Data Processing & CRISP-DM",
-          subtitle: "FH Aachen — Big Data",
+          subtitle: "FH Aachen, Big Data",
           description:
             "Applied the CRISP-DM methodology to a large-scale dataset. Built preprocessing and data-mining pipelines using Python's data stack and Apache Spark, following structured phases from business understanding through deployment.",
           tags: ["Python", "Apache Spark", "Scikit-Learn", "Data Mining", "CRISP-DM"],
@@ -110,7 +118,7 @@ const PORTFOLIO = {
   ],
 
   stats: [
-    { value: 5, label: "Projects" },
+    { value: 6, label: "Projects" },
     { value: 2, label: "Companies" },
     { value: 4, label: "Languages" },
   ],
