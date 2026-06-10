@@ -42,7 +42,7 @@ const PORTFOLIO = {
           title: "Family Accountability App",
           subtitle: "Personal Project, Full-Stack Web Development",
           description:
-            "A gamified accountability platform where groups create high-stakes goal challenges, vote to penalize underperformers, and compete to claim a shared reward pot — turning personal growth into a social game. Built with Next.js, Prisma, and PostgreSQL, featuring real-time updates, NextAuth authentication, and full multilingual support with RTL for Arabic. Deployed on Vercel.",
+            "A gamified accountability platform where groups create high-stakes goal challenges, vote to penalize underperformers, and compete to claim a shared reward pot, turning personal growth into a social game. Built with Next.js, Prisma, and PostgreSQL, featuring real-time updates, NextAuth authentication, and full multilingual support with RTL for Arabic. Deployed on Vercel.",
           tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Supabase", "Tailwind CSS"],
           links: { live: null, github: null },
         },
