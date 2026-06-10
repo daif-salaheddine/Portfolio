@@ -12,7 +12,7 @@ const PORTFOLIO = {
 
   hero: {
     intro:
-      "I'm an Informatik student at FH Aachen building full-stack web apps and automation pipelines. I turn real-world problems into clean, working software.",
+      "I'm a Computer Science student at FH Aachen building full-stack web apps and automation pipelines. I turn real-world problems into clean, working software.",
     photo: "WhatsApp Image 2026-06-10 at 13.03.14.jpeg",
     photoCaption: "fueled by mint tea",
   },
@@ -21,9 +21,9 @@ const PORTFOLIO = {
     titleBefore: "I build things that",
     titleAccent: "actually work.",
     paragraphs: [
-      "I'm <strong>Salaheddine Daif</strong>, an Informatik student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> with a focus on full-stack web development and automation. I care about writing code that's clean, purposeful, and built to last.",
+      "I'm <strong>Salaheddine Daif</strong>, a Computer Science student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> with a focus on full-stack web development and automation. I care about writing code that's clean, purposeful, and built to last.",
       "I've shipped real projects with companies like <strong>topsystem GmbH</strong> and <strong>Intense AG</strong> — from collaborative WLAN analysis tools to AI-powered chatbots with SAP integrations.",
-      "Currently based in Aachen and actively looking for a <strong>Werkstudent position</strong> in the Aachen/Cologne area where I can keep learning and contribute to something meaningful.",
+      "Currently based in Aachen and actively looking for a <strong>working student position</strong> in the Aachen/Cologne area where I can keep learning and contribute to something meaningful.",
     ],
   },
 
@@ -55,7 +55,7 @@ const PORTFOLIO = {
       name: "AI & Automation",
       projects: [
         {
-          title: "KI-gestützter Tarif-Chatbot",
+          title: "AI-Powered Energy Tariff Advisor",
           subtitle: "Collaboration with Intense AG",
           description:
             "AI-powered chatbot with an n8n automation pipeline and SAP/OAuth2 integration. Built to answer tariff-related queries in real time by pulling live data from backend systems.",
@@ -101,7 +101,7 @@ const PORTFOLIO = {
   contact: {
     titleBefore: "Let's build something",
     titleAccent: "together.",
-    text: "If you have a Werkstudent role, a freelance project, or just want to connect — my inbox is open.",
+    text: "If you have a working student role, a freelance project, or just want to connect — my inbox is open.",
   },
 
   skills: [
