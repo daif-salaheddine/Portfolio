@@ -22,7 +22,7 @@ const PORTFOLIO = {
     titleAccent: "actually work.",
     paragraphs: [
       "I'm <strong>Salaheddine Daif</strong>, a Computer Science student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> with a focus on full-stack web development and automation. I care about writing code that's clean, purposeful, and built to last.",
-      "I've shipped real projects with companies like <strong>topsystem GmbH</strong> and <strong>Intense AG</strong> — from collaborative WLAN analysis tools to AI-powered chatbots with SAP integrations.",
+      "I've shipped real projects with companies like <strong>topsystem GmbH</strong> and <strong>Intense AG</strong>, from collaborative WLAN analysis tools to AI-powered chatbots with SAP integrations.",
       "Currently based in Aachen and actively looking for a <strong>working student position</strong> in the Aachen/Cologne area where I can keep learning and contribute to something meaningful.",
     ],
   },
@@ -109,7 +109,7 @@ const PORTFOLIO = {
   contact: {
     titleBefore: "Let's build something",
     titleAccent: "together.",
-    text: "If you have a working student role, a freelance project, or just want to connect — my inbox is open.",
+    text: "If you have a working student role, a freelance project, or just want to connect, my inbox is open.",
   },
 
   skills: [
