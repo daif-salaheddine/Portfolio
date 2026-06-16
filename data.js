@@ -22,7 +22,7 @@ const PORTFOLIO = {
     titleAccent: "Real products.",
     paragraphs: [
       "I'm <strong>Salaheddine</strong>, a 3rd year CS student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> focused on full-stack development and automation. Two internships, two shipped products.",
-      "At <strong>topsystem GmbH</strong> I built a WLAN signal analysis tool in a team of six. At <strong>Intense AG</strong> I designed an AI chatbot integrated with SAP from scratch: Google Gemini, n8n, Docker, the works.",
+      "At <strong>topsystem GmbH</strong> I built a WLAN signal analysis tool in a team of six. At <strong>Intense AG</strong> I designed an AI chatbot integrated with SAP from scratch: n8n, Docker, JavaScript, the works.",
       "Looking for a working student role in Aachen or Cologne. I want to build actual things, not just shadow someone.",
     ],
   },
@@ -66,8 +66,8 @@ const PORTFOLIO = {
           title: "AI-Powered Energy Tariff Advisor",
           subtitle: "Collaboration with Intense AG",
           description:
-            "Built during my internship at Intense AG. An autonomous advisor that handles energy tariff queries end-to-end: Google Gemini as the brain, n8n for orchestration, SAP APIs for live data, Docker for deployment.",
-          tags: ["Google Gemini", "n8n", "Docker", "SAP", "Cloudflare"],
+            "Built during my internship at Intense AG. An autonomous advisor that handles energy tariff queries end-to-end: n8n for orchestration, SAP APIs for live data, Docker for deployment, JavaScript gluing it all together.",
+          tags: ["n8n", "Docker", "JavaScript", "SAP"],
           links: {
             live: null,
             github: null,
