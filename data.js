@@ -3,7 +3,7 @@ const PORTFOLIO = {
   email: "contact.salahdaif@gmail.com",
   location: "Aachen, Germany",
 
-  status: "Open to opportunities",
+  status: "Available for working student roles",
 
   school: {
     name: "FH Aachen",
@@ -12,18 +12,18 @@ const PORTFOLIO = {
 
   hero: {
     intro:
-      "I'm a Computer Science student at FH Aachen building full-stack web apps and automation pipelines. I turn real-world problems into clean, working software.",
+      "CS student at FH Aachen. I've built real products for topsystem GmbH and Intense AG, and shipped an app my own family uses every day. Currently looking for a working student role in Aachen or Cologne.",
     photo: "WhatsApp Image 2026-06-10 at 13.03.14.jpeg",
     photoCaption: "fueled by mint tea",
   },
 
   about: {
-    titleBefore: "I build things that",
-    titleAccent: "actually work.",
+    titleBefore: "Not just projects.",
+    titleAccent: "Real products.",
     paragraphs: [
-      "I'm <strong>Salaheddine Daif</strong>, a Computer Science student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> with a focus on full-stack web development and automation. I care about writing code that's clean, purposeful, and built to last.",
-      "I've shipped real projects with companies like <strong>topsystem GmbH</strong> and <strong>Intense AG</strong>, from collaborative WLAN analysis tools to AI-powered chatbots with SAP integrations.",
-      "Currently based in Aachen and actively looking for a <strong>working student position</strong> in the Aachen/Cologne area where I can keep learning and contribute to something meaningful.",
+      "I'm <strong>Salaheddine</strong>, a 3rd year CS student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> focused on full-stack development and automation. Two internships, two shipped products.",
+      "At <strong>topsystem GmbH</strong> I built a WLAN signal analysis tool in a team of six. At <strong>Intense AG</strong> I designed an AI chatbot integrated with SAP from scratch — Google Gemini, n8n, Docker, the works.",
+      "Looking for a working student role in Aachen or Cologne. I want to build actual things, not just shadow someone.",
     ],
   },
 
@@ -42,7 +42,7 @@ const PORTFOLIO = {
           title: "Family Accountability App",
           subtitle: "Personal Project, Full-Stack Web Development",
           description:
-            "A gamified accountability platform where groups create high-stakes goal challenges, vote to penalize underperformers, and compete to claim a shared reward pot, turning personal growth into a social game. Built with Next.js, Prisma, and PostgreSQL, featuring real-time updates, NextAuth authentication, and full multilingual support with RTL for Arabic. Deployed on Vercel.",
+            "A gamified accountability platform where groups create high-stakes goal challenges, vote to penalize underperformers, and compete to claim a shared reward pot, turning personal growth into a social game. My family of 6 has been using it every day since launch. Built with Next.js, Prisma, and PostgreSQL — real-time updates, NextAuth, and full Arabic RTL support. Live on Vercel.",
           tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Supabase", "Tailwind CSS"],
           links: { live: null, github: null },
         },
@@ -50,7 +50,7 @@ const PORTFOLIO = {
           title: "WifiMap",
           subtitle: "Collaboration with topsystem GmbH",
           description:
-            "WLAN analysis web app built in a 6-person agile team. The app visualises signal coverage and network data to help businesses optimise their wireless infrastructure.",
+            "Built in a 6-person team during my internship at topsystem GmbH. We mapped WLAN signal coverage to help businesses find dead zones and fix their network layout.",
           tags: ["React", "TypeScript", "Python"],
           links: {
             live: null,
@@ -66,7 +66,7 @@ const PORTFOLIO = {
           title: "AI-Powered Energy Tariff Advisor",
           subtitle: "Collaboration with Intense AG",
           description:
-            "AI-powered chatbot with an n8n automation pipeline and SAP/OAuth2 integration. Built to answer tariff-related queries in real time by pulling live data from backend systems.",
+            "Built during my internship at Intense AG. An autonomous advisor that handles energy tariff queries end-to-end — Google Gemini as the brain, n8n for orchestration, SAP APIs for live data, Docker for deployment.",
           tags: ["Google Gemini", "n8n", "Docker", "SAP", "Cloudflare"],
           links: {
             live: null,
@@ -90,7 +90,7 @@ const PORTFOLIO = {
           title: "ETL Pipeline & Data Warehouse",
           subtitle: "FH Aachen, Business Intelligence",
           description:
-            "Designed and implemented an ETL pipeline using KNIME to clean and transform raw business data, then loaded it into a Star Schema PostgreSQL data warehouse. Delivered BI dashboards for actionable decision support.",
+            "Designed and implemented an ETL pipeline using KNIME to clean and transform raw business data, then loaded it into a Star Schema PostgreSQL data warehouse. The goal was giving business teams dashboards they could actually read and use.",
           tags: ["KNIME", "PostgreSQL", "ETL", "Star Schema", "BI"],
           links: { live: null, github: null },
         },
@@ -107,9 +107,9 @@ const PORTFOLIO = {
   ],
 
   contact: {
-    titleBefore: "Let's build something",
-    titleAccent: "together.",
-    text: "If you have a working student role, a freelance project, or just want to connect, my inbox is open.",
+    titleBefore: "Get in",
+    titleAccent: "touch.",
+    text: "Open to working student roles, freelance, or just a good conversation about tech.",
   },
 
   skills: [
