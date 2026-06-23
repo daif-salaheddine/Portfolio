@@ -6,7 +6,6 @@
   // â”€â”€ Page meta â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   document.title = data.name;
   document.getElementById("nav-name").textContent = data.name;
-  document.getElementById("hero-name").textContent = data.name;
   document.getElementById("footer-name").textContent = data.name;
   document.getElementById("hero-status").textContent = data.status;
   document.getElementById("location-text").textContent = data.location;
@@ -329,58 +328,22 @@
     obs.observe(el);
   });
 
-  // â”€â”€ Marquee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  const marqueeTrack = document.getElementById("marquee-track");
-  if (marqueeTrack && data.skills) {
-    const buildRow = () =>
-      data.skills.map((s) => {
-        const span = document.createElement("span");
-        span.className = "marquee__item";
-        span.textContent = s;
-        return span;
-      });
-    // Two identical sets for seamless loop
-    [...buildRow(), ...buildRow()].forEach((el) => marqueeTrack.appendChild(el));
-    // Register cursor hover for each pill
-    marqueeTrack.querySelectorAll(".marquee__item").forEach(addCursorHover);
-  }
-
-  // â”€â”€ Stats Count-Up â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  const statsContainer = document.getElementById("about-stats");
-  if (statsContainer && data.stats) {
-    data.stats.forEach((stat) => {
-      const item = document.createElement("div");
-      item.className = "stat-item";
-      item.innerHTML = `<span class="stat-item__value" data-target="${stat.value}">0</span>
-                        <span class="stat-item__label">${stat.label}</span>`;
-      statsContainer.appendChild(item);
+  // Experience Timeline
+  const expContainer = document.getElementById('about-stats');
+  if (expContainer && data.experience) {
+    expContainer.className = 'experience-list reveal';
+    data.experience.forEach(function(item) {
+      const row = document.createElement('div');
+      row.className = 'experience-item';
+      const period = document.createElement('span');
+      period.className = 'experience-item__period';
+      period.textContent = item.period;
+      const detail = document.createElement('span');
+      detail.innerHTML = item.role + ' — <strong>' + item.company + '</strong>';
+      row.appendChild(period);
+      row.appendChild(detail);
+      expContainer.appendChild(row);
     });
-
-    function countUp(el) {
-      const target = parseInt(el.dataset.target, 10);
-      const duration = 900;
-      const start = performance.now();
-      function tick(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.round(eased * target);
-        if (progress < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    }
-
-    const statsObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            statsContainer.querySelectorAll(".stat-item__value").forEach(countUp);
-            statsObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    statsObserver.observe(statsContainer);
   }
 
   // â”€â”€ Parallax â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€

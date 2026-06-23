@@ -18,8 +18,8 @@ const PORTFOLIO = {
   },
 
   about: {
-    titleBefore: "Not just projects.",
-    titleAccent: "Real products.",
+    titleBefore: "A bit about",
+    titleAccent: "me.",
     paragraphs: [
       "I'm <strong>Salaheddine</strong>, a 3rd year CS student at <a href='https://www.fh-aachen.de' target='_blank' rel='noopener'>FH Aachen</a> focused on full-stack development and automation. Two internships, two shipped products.",
       "At <strong>topsystem GmbH</strong> I built a WLAN signal analysis tool in a team of six. At <strong>Intense AG</strong> I designed an AI chatbot integrated with SAP from scratch: n8n, Docker, JavaScript, the works.",
@@ -109,18 +109,12 @@ const PORTFOLIO = {
   contact: {
     titleBefore: "Get in",
     titleAccent: "touch.",
-    text: "Open to working student roles, freelance, or just a good conversation about tech.",
+    text: "I'm based in Aachen and looking for a working student role where I actually get to build things. If that sounds like a fit, drop me a line.",
   },
 
-  skills: [
-    "React", "TypeScript", "Python", "Node.js", "PostgreSQL",
-    "n8n", "Scikit-Learn", "Apache Spark", "KNIME", "SAP", "OAuth2", "Git",
-  ],
-
-  stats: [
-    { value: 6, label: "Projects" },
-    { value: 2, label: "Companies" },
-    { value: 4, label: "Languages" },
+  experience: [
+    { period: "2024", role: "Software Developer Intern", company: "topsystem GmbH" },
+    { period: "2025", role: "Software Developer Intern", company: "Intense AG" },
   ],
 
   social: [
