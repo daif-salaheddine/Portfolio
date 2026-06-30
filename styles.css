@@ -339,9 +339,9 @@ html.light hr.divider::after { background: var(--bg); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--max-w);
+  max-width: 100%;
   margin: 0 auto;
-  padding: 1.25rem var(--pad-x);
+  padding: 1.25rem clamp(1.5rem, 6vw, 6rem);
 }
 
 .navbar__logo-text {
@@ -515,9 +515,12 @@ html.light .icon-moon { display: none; }
   align-items: center;
   padding-top: calc(var(--header-h) + 2rem);
   padding-bottom: 4rem;
+  max-width: 100%;
+  padding-left: clamp(1.5rem, 6vw, 6rem);
+  padding-right: clamp(1.5rem, 6vw, 6rem);
 }
 
-.hero__content { width: 80%; max-width: 1000px; }
+.hero__content { width: 82%; max-width: 1080px; }
 
 /* Badge */
 .hero__badge {
