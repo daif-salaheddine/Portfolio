@@ -17,6 +17,12 @@ const PORTFOLIO = {
     photoCaption: "fueled by mint tea",
   },
 
+  skills: [
+    "Next.js", "TypeScript", "React", "Python", "PostgreSQL",
+    "n8n", "Docker", "SAP", "Apache Spark", "Scikit-Learn",
+    "KNIME", "Tailwind CSS", "Git",
+  ],
+
   about: {
     titleBefore: "A bit about",
     titleAccent: "me.",

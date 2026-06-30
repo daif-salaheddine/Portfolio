@@ -42,6 +42,12 @@
     });
   }
 
+  // Hero watermark numeral (giant faint number behind the name)
+  const heroWatermark = document.getElementById("hero-watermark");
+  if (heroWatermark && data.stats && data.stats[0]) {
+    heroWatermark.textContent = String(data.stats[0].value).padStart(2, "0");
+  }
+
   // About
   document.getElementById("about-title").innerHTML =
     `${data.about.titleBefore} <em>${data.about.titleAccent}</em>`;
@@ -312,7 +318,7 @@
       particles.forEach(function (p) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(200,169,106," + p.o + ")";
+        ctx.fillStyle = "rgba(207,152,32," + p.o + ")";
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
@@ -401,13 +407,11 @@
   });
 
   // ── Parallax ─────────────────────────────────────────────────────
-  const zellige   = document.querySelector(".zellige");
   const heroBgImg2 = document.getElementById("hero-photo-bg");
 
   window.addEventListener("scroll", function () {
     const sy = window.scrollY;
-    if (zellige)     zellige.style.transform     = `translateY(${sy * 0.18}px)`;
-    if (heroBgImg2)  heroBgImg2.style.transform  = `translateY(${sy * 0.06}px)`;
+    if (heroBgImg2) heroBgImg2.style.transform = `translateY(${sy * 0.06}px)`;
   }, { passive: true });
 
   // ── Scroll Progress + Navbar + Back to top ────────────────────────
@@ -457,22 +461,6 @@
     btn.addEventListener("mouseleave", function () {
       btn.style.transform = "";
     });
-  });
-
-  // ── Theme toggle ─────────────────────────────────────────────────
-  const themeToggle = document.getElementById("theme-toggle");
-  if (localStorage.getItem("theme") === "light") {
-    document.documentElement.classList.add("light");
-    themeToggle.setAttribute("aria-label", "Switch to dark mode");
-  }
-
-  themeToggle.addEventListener("click", function () {
-    const isLight = document.documentElement.classList.toggle("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-    themeToggle.setAttribute(
-      "aria-label",
-      isLight ? "Switch to dark mode" : "Switch to light mode"
-    );
   });
 
   // ── Mobile nav ───────────────────────────────────────────────────
