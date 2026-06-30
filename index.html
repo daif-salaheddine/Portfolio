@@ -66,7 +66,12 @@
     <section class="hero" id="top">
       <canvas class="hero__canvas" id="hero-canvas" aria-hidden="true"></canvas>
 
-      <div class="container hero__inner">
+      <div class="hero__photo-wrap" aria-hidden="true">
+        <img class="hero__photo-bg" src="picture.jpg" alt="" id="hero-photo-bg">
+        <div class="hero__photo-veil"></div>
+      </div>
+
+      <div class="container hero__layout">
         <div class="hero__content">
           <div class="hero__badge" id="hero-badge">
             <span id="hero-status"></span>
@@ -93,14 +98,6 @@
           <div class="hero__scroll" aria-hidden="true">
             <span class="hero__scroll-line"></span>
             Scroll
-          </div>
-        </div>
-
-        <div class="hero__visual" id="hero-visual">
-          <div class="hero__photo-glow" aria-hidden="true"></div>
-          <div class="hero__photo-frame" id="hero-photo-frame">
-            <img class="hero__photo-img" src="picture.jpg" alt="Salaheddine Daif">
-            <div class="hero__photo-wipe" id="hero-photo-wipe"></div>
           </div>
         </div>
       </div>
