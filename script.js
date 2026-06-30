@@ -328,15 +328,15 @@
   const loaderBar  = document.getElementById("loader-bar");
   const loaderName = document.getElementById("loader-name");
 
-  const heroBadge    = document.querySelector(".hero__badge");
+  const heroBadge     = document.querySelector(".hero__badge");
   const heroFirstLine = document.getElementById("hero-firstname");
   const heroLastLine  = document.getElementById("hero-lastname");
-  const heroRole     = document.getElementById("hero-role");
-  const heroSub      = document.getElementById("hero-intro");
-  const heroStats    = document.getElementById("hero-stats-row");
-  const heroCtas     = document.querySelector(".hero__ctas");
-  const heroScroll   = document.querySelector(".hero__scroll");
-  const heroFrame    = document.getElementById("hero-photo-frame");
+  const heroRole      = document.getElementById("hero-role");
+  const heroSub       = document.getElementById("hero-intro");
+  const heroStats     = document.getElementById("hero-stats-row");
+  const heroCtas      = document.querySelector(".hero__ctas");
+  const heroScroll    = document.querySelector(".hero__scroll");
+  const heroBg        = document.getElementById("hero-photo-bg");
 
   setTimeout(function () { loaderName.classList.add("is-visible"); }, 120);
   setTimeout(function () { loaderBar.style.width = "100%"; }, 220);
@@ -344,22 +344,22 @@
   setTimeout(function () {
     loader.classList.add("is-hidden");
 
+    // Photo fades in first (behind everything)
+    if (heroBg) heroBg.classList.add("is-visible");
+
     // Badge
     setTimeout(function () { heroBadge.classList.add("is-visible"); }, 80);
 
-    // Name lines — clip reveal, first then last (180ms apart)
+    // Name lines — clip reveal, first then last
     setTimeout(function () { heroFirstLine.classList.add("is-visible"); }, 200);
-    setTimeout(function () { heroLastLine.classList.add("is-visible"); }, 380);
+    setTimeout(function () { heroLastLine.classList.add("is-visible"); }, 400);
 
-    // Photo: wipe reveals 550ms after loader done
-    setTimeout(function () { if (heroFrame) heroFrame.classList.add("is-visible"); }, 550);
-
-    // Role + sub + stats + ctas cascade
-    setTimeout(function () { if (heroRole)  heroRole.classList.add("is-visible"); }, 620);
-    setTimeout(function () { if (heroSub)   heroSub.classList.add("is-visible"); }, 720);
-    setTimeout(function () { if (heroStats) heroStats.classList.add("is-visible"); }, 840);
-    setTimeout(function () { heroCtas.classList.add("is-visible"); }, 960);
-    setTimeout(function () { heroScroll.classList.add("is-visible"); }, 1100);
+    // Role → sub → stats → ctas cascade
+    setTimeout(function () { if (heroRole)  heroRole.classList.add("is-visible"); }, 640);
+    setTimeout(function () { if (heroSub)   heroSub.classList.add("is-visible"); }, 750);
+    setTimeout(function () { if (heroStats) heroStats.classList.add("is-visible"); }, 870);
+    setTimeout(function () { heroCtas.classList.add("is-visible"); }, 990);
+    setTimeout(function () { heroScroll.classList.add("is-visible"); }, 1140);
 
   }, 1450);
 
@@ -402,12 +402,12 @@
 
   // ── Parallax ─────────────────────────────────────────────────────
   const zellige   = document.querySelector(".zellige");
-  const heroFrame2 = document.getElementById("hero-photo-frame");
+  const heroBgImg2 = document.getElementById("hero-photo-bg");
 
   window.addEventListener("scroll", function () {
     const sy = window.scrollY;
-    if (zellige)    zellige.style.transform    = `translateY(${sy * 0.18}px)`;
-    if (heroFrame2) heroFrame2.style.transform = `translateY(${sy * 0.08}px)`;
+    if (zellige)     zellige.style.transform     = `translateY(${sy * 0.18}px)`;
+    if (heroBgImg2)  heroBgImg2.style.transform  = `translateY(${sy * 0.06}px)`;
   }, { passive: true });
 
   // ── Scroll Progress + Navbar + Back to top ────────────────────────
