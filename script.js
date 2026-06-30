@@ -282,6 +282,48 @@
   document.addEventListener("mouseup",   function () { cursorRing.classList.remove("is-clicking"); });
 
   // ── Page Loader ───────────────────────────────────────────────────
+  // ── Canvas particles ─────────────────────────────────────────────
+  (function () {
+    const canvas = document.getElementById("hero-canvas");
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+
+    const COUNT = 55;
+    const particles = Array.from({ length: COUNT }, function () {
+      return {
+        x:  Math.random() * window.innerWidth,
+        y:  Math.random() * window.innerHeight,
+        r:  Math.random() * 1.4 + 0.4,
+        dx: (Math.random() - 0.5) * 0.25,
+        dy: (Math.random() - 0.5) * 0.25,
+        o:  Math.random() * 0.35 + 0.05,
+      };
+    });
+
+    (function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(function (p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(200,169,106," + p.o + ")";
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+        if (p.x < 0 || p.x > canvas.width)  p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(draw);
+    })();
+  })();
+
+  // ── Page Loader ───────────────────────────────────────────────────
   const loader     = document.getElementById("page-loader");
   const loaderBar  = document.getElementById("loader-bar");
   const loaderName = document.getElementById("loader-name");
@@ -294,6 +336,7 @@
   const heroStats    = document.getElementById("hero-stats-row");
   const heroCtas     = document.querySelector(".hero__ctas");
   const heroScroll   = document.querySelector(".hero__scroll");
+  const heroFrame    = document.getElementById("hero-photo-frame");
 
   setTimeout(function () { loaderName.classList.add("is-visible"); }, 120);
   setTimeout(function () { loaderBar.style.width = "100%"; }, 220);
@@ -304,16 +347,19 @@
     // Badge
     setTimeout(function () { heroBadge.classList.add("is-visible"); }, 80);
 
-    // Name lines — slide up from clip, first then last
+    // Name lines — clip reveal, first then last (180ms apart)
     setTimeout(function () { heroFirstLine.classList.add("is-visible"); }, 200);
     setTimeout(function () { heroLastLine.classList.add("is-visible"); }, 380);
 
+    // Photo: wipe reveals 550ms after loader done
+    setTimeout(function () { if (heroFrame) heroFrame.classList.add("is-visible"); }, 550);
+
     // Role + sub + stats + ctas cascade
-    setTimeout(function () { heroRole.classList.add("is-visible"); }, 620);
-    setTimeout(function () { heroSub.classList.add("is-visible"); }, 720);
-    setTimeout(function () { heroStats.classList.add("is-visible"); }, 820);
-    setTimeout(function () { heroCtas.classList.add("is-visible"); }, 940);
-    setTimeout(function () { heroScroll.classList.add("is-visible"); }, 1080);
+    setTimeout(function () { if (heroRole)  heroRole.classList.add("is-visible"); }, 620);
+    setTimeout(function () { if (heroSub)   heroSub.classList.add("is-visible"); }, 720);
+    setTimeout(function () { if (heroStats) heroStats.classList.add("is-visible"); }, 840);
+    setTimeout(function () { heroCtas.classList.add("is-visible"); }, 960);
+    setTimeout(function () { heroScroll.classList.add("is-visible"); }, 1100);
 
   }, 1450);
 
@@ -354,12 +400,14 @@
     obs.observe(el);
   });
 
-  // ── Parallax (zellige bg elements) ───────────────────────────────
-  const zellige  = document.querySelector(".zellige");
+  // ── Parallax ─────────────────────────────────────────────────────
+  const zellige   = document.querySelector(".zellige");
+  const heroFrame2 = document.getElementById("hero-photo-frame");
 
   window.addEventListener("scroll", function () {
     const sy = window.scrollY;
-    if (zellige) zellige.style.transform = `translateY(${sy * 0.18}px)`;
+    if (zellige)    zellige.style.transform    = `translateY(${sy * 0.18}px)`;
+    if (heroFrame2) heroFrame2.style.transform = `translateY(${sy * 0.08}px)`;
   }, { passive: true });
 
   // ── Scroll Progress + Navbar + Back to top ────────────────────────
