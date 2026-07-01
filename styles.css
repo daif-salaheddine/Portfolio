@@ -434,7 +434,7 @@ hr.divider {
   right: 0; top: 0;
   height: 100%; width: 55%;
   object-fit: cover;
-  object-position: top center;
+  object-position: 50% 28%;
   opacity: 0;
   transition: opacity 1.4s var(--ease-out);
 }
