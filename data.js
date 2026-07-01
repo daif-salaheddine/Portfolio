@@ -23,6 +23,13 @@ const PORTFOLIO = {
     "KNIME", "Tailwind CSS", "Git",
   ],
 
+  stats: [
+    { value: 6,  label: "Projects"     },
+    { value: 2,  label: "Companies"    },
+    { value: 4,  label: "Languages"    },
+    { value: 4,  label: "Years coding" },
+  ],
+
   about: {
     titleBefore: "A bit about",
     titleAccent: "me.",
